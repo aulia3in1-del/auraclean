@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AU'RA CLEAN — Layanan Cleaning Profesional</title>
+  <meta name="description" content="AU'RA CLEAN: layanan cleaning rumah dan kantor ramah lingkungan. Deep cleaning, cleaning kantor, eco-friendly. Hubungi 08382225369." />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #eaf6ff;
+      --bg2: #f5fff0;
+      --primary: #0069d9;
+      --accent: #28a745;
+      --accent2: #ffc107;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #6b7280;
+      --radius: 14px;
+      --maxw: 1150px;
+      --gap: 20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      color:var(--text);
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Header */
+    .site-header{
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      color:white;
+      text-align:center;
+      padding:56px 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .site-header .wrap{
+      max-width:var(--maxw);
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .brand i{font-size:40px}
+    .brand h1{font-size:32px;margin:0;letter-spacing:0.5px}
+    .site-header p{margin:6px 0 0;font-weight:500;opacity:0.95}
+
+    /* Nav */
+    nav.main-nav{
+      background:rgba(0,0,0,0.05);
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      padding:10px 12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+      position:sticky;
+      top:0;
+      z-index:40;
+    }
+    nav a{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 12px;
+      border-radius:10px;
+    }
+    nav a:hover{background:#ffffffaa;color:var(--primary)}
+
+    main{max-width:var(--maxw);margin:28px auto;padding:0 16px}
+
+    .hero{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 8px 28px rgba(9,30,66,0.06);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:24px;
+      align-items:center;
+    }
+    .hero h2{margin:0 0 8px;font-size:26px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .hero .cta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      border:0;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .btn-primary{background:linear-gradient(90deg,var(--primary),#2b8cff);color:white}
+    .btn-secondary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:white}
+
+    .hero-image{
+      width:100%;
+      max-width:420px;
+      border-radius:12px;
+      height:260px;
+      object-fit:cover;
+      box-shadow:0 6px 18px rgba(2,6,23,0.08);
+      display:block;
+    }
+
+    /* sections */
+    section{margin-top:34px}
+    .grid-4{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:var(--gap);
+    }
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(9,30,66,0.04);
+    }
+    .card h3{margin-top:0}
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap:12px;
+    }
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+
+    .testimonials{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfffb)}
+    .testimonial{padding:12px;margin-bottom:12px;border-radius:8px;background:white;box-shadow:0 6px 18px rgba(9,30,66,0.03)}
+
+    /* faq */
+    .faq-item{margin-bottom:12px}
+    .faq-q{
+      background:#eff6ff;padding:12px;border-radius:10px;cursor:pointer;font-weight:700;
+    }
+    .faq-a{display:none;padding:12px;background:#f7fff3;border-radius:8px;margin-top:8px}
+
+    /* contact */
+    .contact-form{max-width:640px;margin:0 auto;display:grid;gap:10px}
+    input[type="text"],input[type="email"],textarea{
+      width:100%;padding:12px;border-radius:10px;border:1px solid #e6e6e6;font-size:15px
+    }
+    footer{
+      margin-top:40px;padding:18px 16px;text-align:center;color:white;background:linear-gradient(90deg,var(--primary),#004a9f);border-radius:12px;margin-bottom:30px
+    }
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr}
+      .hero-image{max-width:100%;height:220px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner" aria-label="AU'RA CLEAN header">
+    <div class="wrap">
+      <div class="brand" aria-hidden="true">
+        <i class="fa-solid fa-broom"></i>
+        <h1>AU'RA CLEAN</h1>
+      </div>
+      <p>Cleaning rumah & kantor — cepat, rapi, dan ramah lingkungan</p>
+    </div>
+  </header>
+
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="#home">Beranda</a>
+    <a href="#about">Tentang</a>
+    <a href="#services">Layanan</a>
+    <a href="#gallery">Galeri</a>
+    <a href="#testimonials">Testimoni</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">Selamat datang di AU'RA CLEAN</h2>
+        <p>Kami menghadirkan layanan cleaning profesional dengan metode ramah lingkungan. Tim bersertifikat, peralatan modern, dan garansi kualitas.</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="callNow" type="button" title="Hubungi kami">
+            <i class="fa-solid fa-phone"></i> Hubungi 08382225369
+          </button>
+          <button class="btn btn-secondary" id="bookNow" type="button" title="Pesan layanan" onclick="focusContact()">
+            <i class="fa-solid fa-calendar-check"></i> Pesan Sekarang
+          </button>
+          <label for="image-input" class="btn" style="background:#f3f4f6;border:1px solid #e6e6e6;">
+            <i class="fa-solid fa-image"></i> Ganti Foto
+          </label>
+          <input id="image-input" type="file" accept="image/*" style="display:none" />
+        </div>
+        <p style="margin-top:12px;color:var(--muted);font-size:14px">Tip: gunakan foto tim kamu untuk meningkatkan kepercayaan pelanggan.</p>
+      </div>
+
+      <div>
+        <img id="heroImage" class="hero-image" alt="Tim AU'RA CLEAN" loading="lazy"
+             src="https://images.unsplash.com/photo-1581578734547-5d0c0dc1b8d4?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h2 id="about-title">Tentang AU'RA CLEAN</h2>
+      <p>AU'RA CLEAN hadir dengan pengalaman belasan tahun melayani rumah dan kantor. Fokus kami: hasil bersih, proses aman, dan ramah lingkungan. Semua tenaga kerja kami terlatih dan memakai perlengkapan yang higienis.</p>
+      <p><strong>Keunggulan:</strong> garansi 7 hari, bahan eco-friendly, jadwal fleksibel, dan paket berlangganan untuk kantor.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Layanan Kami</h2>
+      <div class="grid-4">
+        <div class="card">
+          <h3><i class="fa-solid fa-house"></i> Cleaning Rumah</h3>
+          <p>Pembersihan rutin atau one-time, termasuk kamar mandi, dapur, lantai, dan perapihan.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-building"></i> Cleaning Kantor</h3>
+          <p>Paket harian, mingguan, atau bulanan, disesuaikan kebutuhan operasional bisnis.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-spray-can-sparkles"></i> Deep Cleaning</h3>
+          <p>Membersihkan area sulit dijangkau, karpet, furnitur, dan peralatan dengan alat khusus.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-leaf"></i> Eco-Friendly</h3>
+          <p>Produk non-toxic dan aman untuk anak & hewan peliharaan. Pilihan terbaik untuk keluarga sehat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="card" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Galeri</h2>
+      <div class="gallery" id="galleryGrid">
+        <img alt="Contoh 1" src="https://via.placeholder.com/600x400?text=AU'RA+CLEAN+1" loading="lazy">
+        <img alt="Contoh 2" src="https://via.placeholder.com/600x400?text=AU'RA+CLEAN+2" loading="lazy">
+        <img alt="Contoh 3" src="https://via.placeholder.com/600x400?text=AU'RA+CLEAN+3" loading="lazy">
+        <img alt="Contoh 4" src="https://via.placeholder.com/600x400?text=AU'RA+CLEAN+4" loading="lazy">
+        <img alt="Contoh 5" src="https://via.placeholder.com/600x400?text=AU'RA+CLEAN+5" loading="lazy">
+        <img alt="Contoh 6" src="https://via.placeholder.com/600x400?text=AU'RA+CLEAN+6" loading="lazy">
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="card" aria-labelledby="testi-title">
+      <h2 id="testi-title">Testimoni</h2>
+      <div class="testimonials">
+        <div class="testimonial">"Cepat, rapi, dan komunikatif. Recomended!" — Ani, Jakarta</div>
+        <div class="testimonial">"Timnya profesional dan teliti. Kantor jadi lebih nyaman." — Budi, Bandung</div>
+        <div class="testimonial">"Produk eco-friendlynya aman untuk anak saya." — Sari, Surabaya</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="card" aria-labelledby="faq-title">
+      <h2 id="faq-title">Pertanyaan Umum</h2>
+      <div class="faq-item">
+        <div class="faq-q" data-id="q1">Berapa lama proses cleaning?</div>
+        <div class="faq-a" id="q1">Durasi tergantung luas area. Rumah standar biasanya 2–4 jam. Layanan deep cleaning bisa 6 jam atau lebih.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-id="q2">Apakah bahan aman untuk anak dan hewan?</div>
+        <div class="faq-a" id="q2">Ya — kami menggunakan bahan non-toxic untuk opsi ramah lingkungan. Sampaikan jika ada alergi khusus.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-id="q3">Bagaimana cara memesan?</div>
+        <div class="faq-a" id="q3">Hubungi kami lewat tombol "Hubungi" atau isi formulir di bagian Kontak. Tim kami akan konfirmasi dalam 24 jam.</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Kontak & Pemesanan</h2>
+      <p>Chat/WA: <strong id="phoneText">08382225369</strong> — atau isi formulir berikut.</p>
+      <form id="contactForm" class="contact-form" onsubmit="handleSubmit(event)" novalidate>
+        <input type="text" name="name" id="name" placeholder="Nama lengkap" required>
+        <input type="email" name="email" id="email" placeholder="Email aktif" required>
+        <textarea name="message" id="message" rows="5" placeholder="Pesan / info alamat & jadwal" required></textarea>
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan</button>
+          <button class="btn" type="button" onclick="fillExample()">Isi Contoh</button>
+        </div>
+        <div id="formStatus" aria-live="polite" style="color:var(--muted);font-size:14px"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2025 AU'RA CLEAN — Semua hak dilindungi.</div>
+    <div style="font-size:13px;opacity:0.9;margin-top:6px">Alamat: Kustom sesuai bisnis Anda • NPWP/Legal bila perlu</div>
+  </footer>
+
+  <script>
+    // IMAGE UPLOAD FOR HERO
+    const imageInput = document.getElementById('image-input');
+    const heroImage = document.getElementById('heroImage');
+    imageInput.addEventListener('change', function () {
+      const file = this.files && this.files[0];
+      if (!file) return;
+      const valid = file.type.startsWith('image/');
+      if (!valid) { alert('Pilih file gambar (jpg/png).'); return; }
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        heroImage.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(q=>{
+      q.addEventListener('click', ()=>{
+        const id = q.dataset.id;
+        const a = document.getElementById(id);
+        if (!a) return;
+        const shown = a.style.display === 'block';
+        document.querySelectorAll('.faq-a').forEach(x=> x.style.display='none');
+        a.style.display = shown ? 'none' : 'block';
+      });
+    });
+
+    // Contact form fake submit (replace with endpoint later)
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const status = document.getElementById('formStatus');
+      if(!name || !email || !msg){ status.textContent = 'Mohon lengkapi semua field.'; return; }
+      // Simulasi pengiriman
+      status.textContent = 'Pesan dikirim. Tim kami akan menghubungi Anda dalam 24 jam.';
+      // TODO: kirim ke server / API / email
+      e.target.reset();
+    }
+
+    // Helper untuk demo
+    function fillExample(){
+      document.getElementById('name').value = 'Yaya Yaya';
+      document.getElementById('email').value = 'yaya@example.com';
+      document.getElementById('message').value = 'Halo, saya mau pesan deep cleaning untuk rumah 3 kamar, Sabtu pagi.';
+    }
+
+    // focus ke contact section
+    function focusContact(){ document.getElementById('contact').scrollIntoView({behavior:'smooth'}); }
+
+    // optional: call button
+    document.getElementById('callNow').addEventListener('click', ()=>{
+      // jika ingin memakai tel: link
+      window.location.href = 'tel:08382225369';
+    });
+  </script>
+</body>
+</html>
